@@ -6,3 +6,4 @@ services:
 script:  
   - docker build -t guggens/dind-jenkins-slave:latest .
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push guggens/dind-jenkins-slave:latest
