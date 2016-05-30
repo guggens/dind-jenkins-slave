@@ -14,7 +14,9 @@ RUN apt-get -q update &&\
 
 # Set user jenkins to the image
 RUN useradd -m -d /home/jenkins -s /bin/sh jenkins &&\
-    echo "jenkins:jenkins" | chpasswd
+    echo "jenkins:jenkins" | chpasswd 
+    
+RUN echo "jenkins     ALL_NOPASSWD: ALL" >> /etc/sudoers.d/sudo
 
 #allow jenkins user to run docker daemon    
 RUN chmod ugo+rw /var/run
