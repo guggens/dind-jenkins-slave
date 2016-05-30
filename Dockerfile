@@ -1,5 +1,5 @@
 # This is a meta jenkins slave to build other jenkins slave docker images
-FROM jpetazzo:dind
+FROM jpetazzo/dind:latest
 MAINTAINER Sascha Guggenberger<guggens@googlemail.com>
 
 # Upgrade packages on image
