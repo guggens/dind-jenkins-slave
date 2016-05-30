@@ -16,7 +16,7 @@ RUN apt-get -q update &&\
 RUN useradd -m -d /home/jenkins -s /bin/sh jenkins &&\
     echo "jenkins:jenkins" | chpasswd 
     
-RUN echo "jenkins     ALL_NOPASSWD: ALL" >> /etc/sudoers.d/sudo
+RUN echo " jenkins     ALL=(ALL) NOPASSWD: ALL " >> /etc/sudoers.d/sudo
 
 #allow jenkins user to run docker daemon    
 RUN chmod ugo+rw /var/run
