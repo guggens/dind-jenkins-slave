@@ -12,3 +12,5 @@ docker run -d jenkinsci/jenkins
 - add a new cloud (Docker) 
 - connect to docker remote api
 - create a new image type
+
+![travis build state](https://travis-ci.org/guggens/dind-jenkins-slave.svg?branch=master)
