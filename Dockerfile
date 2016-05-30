@@ -16,6 +16,9 @@ RUN apt-get -q update &&\
 RUN useradd -m -d /home/jenkins -s /bin/sh jenkins &&\
     echo "jenkins:jenkins" | chpasswd
 
+#allow jenkins user to run docker daemon    
+RUN chmod ugo+rw /var/run
+
 # Standard SSH port
 EXPOSE 22
 
