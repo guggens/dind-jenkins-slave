@@ -25,4 +25,4 @@ RUN chmod ugo+rw /var/run
 EXPOSE 22
 
 # Default command
-CMD ["/usr/sbin/sshd", "-D"]
+CMD service docker start && ["/usr/sbin/sshd", "-D"]
